@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-navy: #1d1f3e;
+    --brand-cyan: #1aabbb;
+    --primary-blue: #1d1f3e;
+    --secondary-blue: #1aabbb;
+    --bg-light: #ebf2f7;
+  }
+
+  body {
+    background-color: #ebf2f7;
+    color: #1d1f3e;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom styles for print & PDF generation */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* When printing action plan only, hide non-action elements */
+  body.print-action-only .no-action-print {
+    display: none !important;
+  }
+
+  .print-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .shadow-sm, .shadow, .shadow-md, .shadow-lg, .shadow-xl {
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+}
+
+/* Range input slider with smooth gradient tracks */
+.pool-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+}
+
+.pool-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid #1aabbb;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+
+.pool-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+  border-color: #159ba9;
+}
+
+.pool-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid #1aabbb;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.pool-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 9999px;
+  background: transparent;
+}

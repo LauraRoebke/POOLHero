@@ -1,0 +1,6 @@
+{
+  "name": "PoolHero",
+  "description": "PoolHero – Der Helfer bei Pool-Problemen. Interaktive 5-Schritte-Analyse mit Beckenvolumenrechner, Wasserwertprüfung, individuellen Dosierungsempfehlungen und PDF-Export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
